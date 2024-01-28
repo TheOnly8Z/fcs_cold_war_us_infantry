@@ -227,4 +227,11 @@ if FCS then
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/pasgt helmet.mdl",
 		BoneMods = HELMETFIX,
 	})
+
+	FCS.DefineItem("cwus_vest", {
+		PrintName = "PASGT Vest",
+		Category = "Body Armor",
+		Type = FCS_EXO,
+		Model = "models/taggart_kali/characters/cold war us infantry/attachments/pasgt vest.mdl",
+	})
 end
