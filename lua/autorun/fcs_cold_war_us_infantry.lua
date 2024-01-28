@@ -93,11 +93,10 @@ if FCS then
 			},
 		},
 	}
-
 	local CAPFIX = {
 		["female"] = {
 			["ValveBiped.Bip01_Head1"] = {
-				translate = v( 0, -0.6, 0 ),
+				translate = v( 0, -0, 0 ),
 				scale = qv(1),
 			},
 		},
@@ -147,6 +146,52 @@ if FCS then
 			},
 		},
 	}
+	local GOGGLESFIX = {
+		["female"] = {
+			["ValveBiped.Bip01_Head1"] = {
+				translate = v( -0.5, -0.6, 0 ),
+				scale = qv( 0.975 ),
+			},
+		},
+		["male_01"] = {
+			["ValveBiped.Bip01_Head1"] = {
+				translate = v( 0.5, -0.3, 0 ),
+				scale = v(1, 1.075, 1.05),
+			},
+		},
+		["male_02"] = {
+			["ValveBiped.Bip01_Head1"] = {
+				translate = v( 0, -0.5, -0.2 ),
+			},
+		},
+		["male_03"] = {
+			["ValveBiped.Bip01_Head1"] = {
+				translate = v( 0.5, -0.5, -0.2 ),
+			},
+		},
+		["male_04"] = {
+			["ValveBiped.Bip01_Head1"] = {
+				translate = v( 0.6, -0.2, 0 ),
+			},
+		},
+		["male_06"] = {
+			["ValveBiped.Bip01_Head1"] = {
+				translate = v( 0.5, -0.5, 0 ),
+				scale = qv(1.05),
+			},
+		},
+		["male_07"] = {
+			["ValveBiped.Bip01_Head1"] = {
+				scale = v( 1, 1.05, 1 ),
+			},
+		},
+		["male_09"] = {
+			["ValveBiped.Bip01_Head1"] = {
+				translate = v( 0.3, 0, 0 ),
+				scale = v(1, 1.05, 1.05),
+			},
+		},
+	}
 	FCS.DefineItem("cwus_patrol", {
 		PrintName = "Patrol Cap",
 		Type = FCS_HAT,
@@ -172,52 +217,14 @@ if FCS then
 		PrintName = "USGI Goggles",
 		Type = FCS_EYES,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/goggles.mdl",
-		BoneMods = {
-			["female"] = {
-				["ValveBiped.Bip01_Head1"] = {
-					translate = v( -0.5, -1, 0 ),
-					scale = qv( 0.95 ),
-				},
-			},
-			["male_01"] = {
-				["ValveBiped.Bip01_Head1"] = {
-					translate = v( 0.5, -0.3, 0 ),
-					scale = v(1, 1.075, 1.05),
-				},
-			},
-			["male_02"] = {
-				["ValveBiped.Bip01_Head1"] = {
-					translate = v( 0, -0.5, -0.2 ),
-				},
-			},
-			["male_03"] = {
-				["ValveBiped.Bip01_Head1"] = {
-					translate = v( 0.5, -0.5, -0.2 ),
-				},
-			},
-			["male_04"] = {
-				["ValveBiped.Bip01_Head1"] = {
-					translate = v( 0.6, -0.2, 0 ),
-				},
-			},
-			["male_06"] = {
-				["ValveBiped.Bip01_Head1"] = {
-					translate = v( 0.5, -0.5, 0 ),
-					scale = qv(1.05),
-				},
-			},
-			["male_07"] = {
-				["ValveBiped.Bip01_Head1"] = {
-					scale = v( 1, 1.05, 1 ),
-				},
-			},
-			["male_09"] = {
-				["ValveBiped.Bip01_Head1"] = {
-					translate = v( 0.3, 0, 0 ),
-					scale = v(1, 1.05, 1.05),
-				},
-			},
-		},
+		BoneMods = GOGGLESFIX,
+	})
+
+	FCS.DefineItem("cwus_glasses", {
+		PrintName = "USGI Glasses",
+		Type = FCS_EYES,
+		Model = "models/taggart_kali/characters/cold war us infantry/attachments/gi glasses.mdl",
+		BoneMods = GOGGLESFIX,
 	})
 
 	FCS.DefineItem("cwus_helmet", {
