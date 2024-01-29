@@ -235,10 +235,38 @@ if FCS then
 		BoneMods = HELMETFIX,
 	})
 
+	local VESTFIX = {
+		[true] = {
+			["ValveBiped.Bip01_Spine"] = {
+				translate = v( 0, -1.5, 0 ),
+			},
+			["ValveBiped.Bip01_Spine1"] = {
+				translate = v( 0, -1.25, 0 ),
+				scale = qv(1.025),
+			},
+			["ValveBiped.Bip01_Spine2"] = {
+				translate = v( 0.25, -0.5, 0 ),
+				scale = v(1, 1.05, 1),
+			},
+			["ValveBiped.Bip01_Spine4"] = {
+				translate = v( 0, -0.5, 0 ),
+				scale = v(1, 1.2, 1),
+			},
+		},
+	}
+
 	FCS.DefineItem("cwus_vest", {
 		PrintName = "PASGT Vest",
 		Category = "Body Armor",
 		Type = FCS_EXO,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/pasgt vest.mdl",
+		BoneMods = VESTFIX,
+	})
+
+	FCS.DefineItem("cwus_alice", {
+		PrintName = "ALICE Webbing",
+		Type = FCS_BELT,
+		Model = "models/taggart_kali/characters/cold war us infantry/attachments/alice webbing pasgt vest.mdl",
+		BoneMods = VESTFIX,
 	})
 end
