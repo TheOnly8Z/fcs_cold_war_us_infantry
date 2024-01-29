@@ -12,18 +12,8 @@ if FCS then
 		[1] = "6 Color Desert Camo",
 		[2] = "3 Color Desert Camo",
 		[3] = "T-Pattern Camo",
-		[4] = "Olive",
-		[5] = "Tan",
-		[6] = "Black",
-		[7] = "Navy Blue",
-	}
-	local USGI_CAMO2 = {
-		[0] = "Woodland Camo",
-		[1] = "6 Color Desert Camo",
-		[2] = "3 Color Desert Camo",
-		[3] = "T-Pattern Camo",
-		[5] = "Olive",
 		[4] = "Tan",
+		[5] = "Olive",
 		[6] = "Black",
 		[7] = "Navy Blue",
 	}
@@ -226,7 +216,7 @@ if FCS then
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/headgear.mdl",
 		Bodygroups = {[1] = 1},
 		BoneMods = CAPFIX,
-		Options = { Skins = USGI_CAMO2 },
+		Options = { Skins = USGI_CAMO },
 	})
 	FCS.DefineItem("cwus_boonie", {
 		PrintName = "Boonie Hat",
@@ -235,7 +225,7 @@ if FCS then
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/headgear.mdl",
 		Bodygroups = {[1] = 2},
 		BoneMods = CAPFIX,
-		Options = { Skins = USGI_CAMO2 },
+		Options = { Skins = USGI_CAMO },
 	})
 
 	FCS.DefineItem("cwus_goggles", {
@@ -244,6 +234,20 @@ if FCS then
 		Type = FCS_EYES,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/goggles.mdl",
 		BoneMods = GOGGLESFIX,
+		Options = { Skins = {
+			[0] = "Clear (Olive)",
+			[1] = "Clear (Tan)",
+			[2] = "Clear (Black)",
+			[3] = "Tinted (Olive)",
+			[4] = "Tinted (Tan)",
+			[5] = "Tinted (Black)",
+			[6] = "Opaque (Olive)",
+			[7] = "Opaque (Tan)",
+			[8] = "Opaque (Black)",
+			[9] = "Green (Olive)",
+			[10] = "Green (Tan)",
+			[11] = "Green (Black)",
+		}},
 	})
 
 	FCS.DefineItem("cwus_glasses", {
