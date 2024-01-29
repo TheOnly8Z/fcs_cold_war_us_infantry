@@ -7,6 +7,26 @@ if FCS then
 	local v = Vector
 	local a = Angle
 
+	local USGI_CAMO = {
+		[0] = "Woodland Camo",
+		[1] = "6 Color Desert Camo",
+		[2] = "3 Color Desert Camo",
+		[3] = "T-Pattern Camo",
+		[4] = "Olive",
+		[5] = "Tan",
+		[6] = "Black",
+		[7] = "Navy Blue",
+	}
+	local USGI_CAMO2 = {
+		[0] = "Woodland Camo",
+		[1] = "6 Color Desert Camo",
+		[2] = "3 Color Desert Camo",
+		[3] = "T-Pattern Camo",
+		[5] = "Olive",
+		[4] = "Tan",
+		[6] = "Black",
+		[7] = "Navy Blue",
+	}
 	local HELMETFIX = {
 		["female"] = {
 			["helmet"] = {
@@ -194,27 +214,33 @@ if FCS then
 	}
 	FCS.DefineItem("cwus_patrol", {
 		PrintName = "Patrol Cap",
+		Category = "US Military",
 		Type = FCS_HAT,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/headgear.mdl",
 		BoneMods = CAPFIX,
 	})
 	FCS.DefineItem("cwus_8point", {
 		PrintName = "8-Point Cap",
+		Category = "US Military",
 		Type = FCS_HAT,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/headgear.mdl",
 		Bodygroups = {[1] = 1},
 		BoneMods = CAPFIX,
+		Options = { Skins = USGI_CAMO2 },
 	})
 	FCS.DefineItem("cwus_boonie", {
 		PrintName = "Boonie Hat",
+		Category = "US Military",
 		Type = FCS_HAT,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/headgear.mdl",
 		Bodygroups = {[1] = 2},
 		BoneMods = CAPFIX,
+		Options = { Skins = USGI_CAMO2 },
 	})
 
 	FCS.DefineItem("cwus_goggles", {
 		PrintName = "USGI Goggles",
+		Category = "US Military",
 		Type = FCS_EYES,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/goggles.mdl",
 		BoneMods = GOGGLESFIX,
@@ -222,6 +248,7 @@ if FCS then
 
 	FCS.DefineItem("cwus_glasses", {
 		PrintName = "USGI Glasses",
+		Category = "US Military",
 		Type = FCS_EYES,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/gi glasses.mdl",
 		BoneMods = GOGGLESFIX,
@@ -229,10 +256,11 @@ if FCS then
 
 	FCS.DefineItem("cwus_helmet", {
 		PrintName = "PASGT Helmet",
-		Category = "Helmet",
+		Category = "US Military",
 		Type = FCS_HAT + FCS_EARS,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/pasgt helmet.mdl",
 		BoneMods = HELMETFIX,
+		Options = { Skins = USGI_CAMO },
 	})
 
 	local VESTFIX = {
@@ -257,16 +285,25 @@ if FCS then
 
 	FCS.DefineItem("cwus_vest", {
 		PrintName = "PASGT Vest",
-		Category = "Body Armor",
+		Category = "US Military",
 		Type = FCS_EXO,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/pasgt vest.mdl",
 		BoneMods = VESTFIX,
+		Options = { Skins = USGI_CAMO },
 	})
 
 	FCS.DefineItem("cwus_alice", {
 		PrintName = "ALICE Webbing",
+		Category = "US Military",
 		Type = FCS_BELT,
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/alice webbing pasgt vest.mdl",
 		BoneMods = VESTFIX,
+		Options = {
+			Skins = {
+				[0] = "Olive",
+				[1] = "Tan",
+				[2] = "Black",
+			}
+		}
 	})
 end
