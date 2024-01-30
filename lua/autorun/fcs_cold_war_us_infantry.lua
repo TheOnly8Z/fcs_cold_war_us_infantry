@@ -265,6 +265,11 @@ if FCS then
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/pasgt helmet.mdl",
 		BoneMods = HELMETFIX,
 		Options = { Skins = USGI_CAMO },
+		Armor = {
+			Strength = 1,
+			Durability = 50,
+			Region = {[HITGROUP_HEAD] = FCS_DMGDIR_TOP + FCS_DMGDIR_SIDE + FCS_DMGDIR_BACK},
+		},
 	})
 
 	local VESTFIX = {
@@ -294,6 +299,11 @@ if FCS then
 		Model = "models/taggart_kali/characters/cold war us infantry/attachments/pasgt vest.mdl",
 		BoneMods = VESTFIX,
 		Options = { Skins = USGI_CAMO },
+		Armor = {
+			Strength = 0.75,
+			Durability = 150,
+			Region = {[HITGROUP_CHEST] = true, [HITGROUP_STOMACH] = false},
+		},
 	})
 
 	FCS.DefineItem("cwus_alice", {
